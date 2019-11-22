@@ -1,4 +1,4 @@
-# El código se escribe en el .txt "CODE"
+# El código se escribe en el .rb "CODE"
 # Hay que agregar la PPT al repositorio
 # Preguntas a contestar: 
 
