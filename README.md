@@ -1,4 +1,4 @@
-# El código se escribe en el .txt "CODE"
+# El código se escribe en el .rb "CODE"
 # Hay que agregar la PPT al repositorio
 # Preguntas a contestar: 
 
@@ -19,3 +19,6 @@ tienen? ¿Qué es el monkey patching?
 
 ● Objetos: ¿se puede declarar objetos "al vuelo" y darles comportamiento dinámicamente? 
 
+● Que conceptos del paradigma se ven reflejados en el lenguaje
+
+●Pureza del lenguaje
