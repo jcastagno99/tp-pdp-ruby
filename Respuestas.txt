@@ -1,0 +1,42 @@
+Los equipos que elijan Ruby deberán analizar los siguientes aspectos:
+
+1● Disciplina de Tipado: cómo Ruby tipa las variables.
+
+2● Interpretación: ¿Es ruby un lenguaje compilado o interpretado?
+
+3● Metaprogramación: ¿Qué significa metaprogramar? ¿Qué ofrece Ruby en este sentido?
+
+4● Clases abiertas: ¿Qué son las open clases o clases abiertas? ¿Que ventajas y desventajas tienen? ¿Qué es el monkey patching?
+
+5● Módulos: ¿Qué es y qué tres usos tiene un module? ¿Qué es un mixin? ¿Para qué sirve?
+
+6● Pureza: ¿se cumple el "todo es un objeto"? ¿Qué cosa no lo es? ¿Que consecuencias tiene?
+
+7● Objetos: ¿se puede declarar objetos "al vuelo" y darles comportamiento dinámicamente?
+
+8● Que conceptos del paradigma se ven reflejados en el lenguaje
+
+9●Pureza del lenguaje
+
+
+1: Ruby tiene un tipado dinámico y flexible, es decir, que no sera necesario que nosotros manualmente especifiquemos el tipo de dato de una variable a declarar, es más, dicha
+variable no tendra un tipo asociado, esto permite que lineas como las siguientes sean aceptadas : distancia = 200  distancia = false, por lo que si bien al codear tendremos
+mayor dinamismo al manejar variables, la responsabilidad del buen uso de estas segun sus tipos caera en nosotros.
+
+2: Ruby es un lenguaje interpretado, es decir, que nuestro código en este lenguaje no necesita de un preprocesamiento/compilación para ser ejecutado
+el ciclo de desarrollo (el tiempo entre el momento en que escribes el código y lo pruebas) es más rápido en un lenguaje interpretado. 
+Eso se debe a que en lenguajes compilados es necesario realizar el proceso de compilación cada vez que cambias el código fuente, 
+aunque con herramientas adicionales se puede automatizar.
+
+3: La metaprogramación significa utilizar programas que escribren/manipulan otros programas (o a sí mismos) como datos, o que realizan tareas
+que normalmente se efectuan en tiempo de ejecución permitiendo al programador ahorrar tiempo en la producción de código, en palabras mas simples,
+es la habilidad de usar código para generar código.
+
+Algunas de las herramientas que Ruby nos ofrece sobre este campo son:
+
+* Modificar la estructura del programa en tiempo de ejecución. Una forma de hacerlo, es definiendo métodos dinámicamente usando el método method_missing. 
+* Agregar métodos a instancias existentes de cualquier clase. Esto le permite agregar comportamiento y una instancia de una clase sin cambiar el comportamiento del resto de las instancias de esa clase.
+* Definir diferentes métodos para una instancia de una clase dependiendo del tipo de parametro que se este analizando, gracias al método define_method.
+// Hay más todavía.
+
+4: Las clases abiertas u open clases son clases que permiten que en todo momento se agreguen nuevos métodos a las mismas o se modifiquen otros ya existentes 
