@@ -16,7 +16,6 @@ Los equipos que elijan Ruby deberán analizar los siguientes aspectos:
 
 8● Que conceptos del paradigma se ven reflejados en el lenguaje
 
-9●Pureza del lenguaje
 
 
 1: Ruby tiene un tipado dinámico y flexible, es decir, que no sera necesario que nosotros manualmente especifiquemos el tipo de dato de una variable a declarar, es más, dicha

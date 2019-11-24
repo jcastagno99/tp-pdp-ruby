@@ -1,9 +1,20 @@
 class Pirata
 
-    attr_accessor :items
+    def initialize
+        @cantidadMonedas = 0
+        @items = []
+    end
+    
     @invitante
     @nivelEbriedad
-    @cantidadMonedas = 0
+
+    def items
+        @items
+    end
+
+    def agregar_item!(unItem)
+        @items.push(unItem)
+    end
 
     def invitante
         @invitante
@@ -41,7 +52,7 @@ class Pirata
 
     def validar_gastar_monedas!
         if @cantidadMonedas.equals?(0)
-            puts "Cantidad de monedas insuficientes... insert coin!"
+            raise "Cantidad de monedas insuficientes"
         end
     end
 
@@ -73,7 +84,14 @@ class Barco
 
     @mision
     @capacidad
-    attr_accessor :tripulantes
+
+    def initialize
+        @tripulantes = []
+    end
+    
+    def tripulantes
+        @tripulantes
+    end
 
     def sos_saqueable_por?(unPirata)
         unPirata.pasado_de_grog?
@@ -170,7 +188,9 @@ class BusquedaDelTesoro < Mision
 end
 
 class ConvertirseEnLeyenda < Mision
-    @itemObligatorio
+    def initialize(unItem)
+        @itemObligatorio = unItem
+    end
 
     def es_util?(unPirata)
         unPirata.cantidad_items >= 10 && unPirata.tiene?(@itemObligatorio)
@@ -178,7 +198,10 @@ class ConvertirseEnLeyenda < Mision
 end
 
 class Saqueo < Mision
-    @victima
+    
+    def initialize(unaVictima)
+        @victima = unaVictima
+    end
 
     def es_util?(unPirata)
         unPirata.cantidadMonedas < monedasParaSaquear.limite && @victima.sos_saqueable_por?(unPirata)
@@ -193,14 +216,20 @@ end
 module MonedasParaSaquear
     @limite = 0
 
-    def limite
+    def self.limite
         @limite
     end
 end
 
 class CiudadCostera
 
-    attr_accessor :cantidadHabitantes
+    def initialize(unaCantidad)
+        @cantidadHabitantes = unaCantidad
+    end
+
+    def cantidadHabitantes
+        @cantidadHabitantes
+    end
 
     def sos_saqueable_por?(unPirata)
         unPirata.nivelEbriedad >= 50
