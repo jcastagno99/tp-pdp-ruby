@@ -1,12 +1,13 @@
 class Pirata
 
-    def initialize
+    def initialize (ebriedad)
         @cantidadMonedas = 0
         @items = []
+        @invitante
+        @nivelEbriedad = ebriedad
     end
     
-    @invitante
-    @nivelEbriedad
+   
 
     def items
         @items

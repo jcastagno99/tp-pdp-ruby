@@ -14,7 +14,7 @@ Los equipos que elijan Ruby deberán analizar los siguientes aspectos:
 
 7● Objetos: ¿se puede declarar objetos "al vuelo" y darles comportamiento dinámicamente?
 
-8● Que conceptos del paradigma se ven reflejados en el lenguaje
+8● Que conceptos del paradigma se ven reflejados en el lenguaje 
 
 
 
@@ -39,3 +39,11 @@ Algunas de las herramientas que Ruby nos ofrece sobre este campo son:
 // Hay más todavía.
 
 4: Las clases abiertas u open clases son clases que permiten que en todo momento se agreguen nuevos métodos a las mismas o se modifiquen otros ya existentes 
+
+5: Modulos. Agrupan metodos, constantes, clases. Son similares a las clases pero no se pueden instaciar objetos a partis de ellos. Se declaran con la palabra clase "module"
+	1) Sirven como "archivadores" (librerias) donde se introduce metodos y variables que no se quieren meter en las clases, con la finalidad de darle mas funcionalidad a las Calses que los utilizan. Generalmente se agrupan por tener algo en comun.
+	2) Proveen un "namespace" que es como un scope donde se pueden definir variables y metodos sin que sus nombres colisionen con otros llamados igual.
+	3) Permiten implemetnar mixin
+
+	Mixin: 
+	El Mixins es una técnica para la reutilización de código. El objetivo es que un metodo pueda estar en diferentes clases, aunque las clases no tengan ninguna relación. 
