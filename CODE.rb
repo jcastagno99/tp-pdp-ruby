@@ -65,7 +65,7 @@ class Pirata
         unBarco.cantidad_invitados_por(self)
     end
 
-    def fuiste_invitado_por(unTripulante)
+    def fuiste_invitado_por?(unTripulante)
         @invitante.equals?(unTripulante)
     end
 end
@@ -83,11 +83,10 @@ end
 
 class Barco 
 
-    @mision
-    @capacidad
-
-    def initialize
+    def initialize(unaMision, unaCapacidad)
         @tripulantes = []
+        @mision = unaMision
+        @capacidad = unaCapacidad
     end
     
     def tripulantes
@@ -163,6 +162,23 @@ class Barco
     def tripulantes_pasados_de_grog
         @tripulantes.select{|tripulante| tripulante.pasado_de_grog?}
     end
+
+    def cantidadTripulantesPasadosDeGrog
+		self.tripulantes_pasados_de_grog.size
+    end
+
+    def cantidad_items_entre_tripulantes_pasados_de_grog
+        self.tripulantes_pasados_de_grog.flat_map ({|tripulante| tripulante.items}).size
+    end
+
+    def tripulante_mas_invitador
+        @tripulantes.max {|tripulante| tripulante.cantidad_invitados_para(self)}
+    end
+
+    def cantidad_invitados_por(unTripulante)
+        @tripulantes.count {|tripulante| tripulante.fuiste_invitado_por?(unTripulante)}
+    end
+    
 end
 
 
@@ -215,7 +231,10 @@ class Saqueo < Mision
 end
 
 module MonedasParaSaquear
-    @limite = 0
+
+    def initialize
+        @limite = 0
+    end
 
     def self.limite
         @limite
