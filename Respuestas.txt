@@ -48,4 +48,25 @@ Esto es conocido como monkey patching y generalmente no se lo considera una buen
 	3) Permiten implemetnar mixin
 
 	Mixin: 
-	El Mixins es una técnica para la reutilización de código. El objetivo es que un metodo pueda estar en diferentes clases, aunque las clases no tengan ninguna relación. 
+	El Mixins es una técnica para la reutilización de código. El objetivo es que un metodo pueda estar en diferentes clases, aunque las clases no tengan ninguna relación.
+
+8: Conceptos que se ven reflejados
+
+Como ya vimos que ruby es orientado a objetos, la mayoria de los conceptos que vimos en la materia que aparecen en este lenguaje son de este paradgima.
+
+Obviamente al ser orientado a objetos estan muy presentes los tres pilares del paradigma, el encapsulamiento, polimorfismo y la asignacion de responsabilidad.
+A su vez, aparecen los conceptos de objeto (donde la mayoria de los elementos los son), de clase (clases abtractas, clases abiertas), herencia (sintacticamente
+se representan con un menor "<"), metodos y tambien comportamiento e interfaz.
+En este lenguaje tambien se pueden tirar excepciones con la palabra reservada "raise" acompañada luegode un string con el mensaje que queremos mostrar.
+
+
+Ruby es un lenguaje bastante expresivo ya que busca que ademas de tener nombres claros se los difenrecie con tres criterios.
+Si el metodo retorna un booleano al nombre se le debe agregar un "?" al final, como por ejemplo:
+hoy_esta_soleado? (su retorno sera true o false).
+Si el metodo provoca algun efecto al nombre se le debe agregar un "!" al final como por ejemplo algun metodo que agregue algo a alguna lista o cambie el valor
+de una variable.
+Si el metodo retorna algo que no sea booleano solo lleva el nombre sin ningun agregado.
+
+
+Para terminar, este lenguaje posee tanto inmutabilidad como efecto, que se controlan mediante la correcta asignacion de responsabilidad. Por ejemplo como ya vimos
+en wollok, existen los metodos map y select(que es el filter) que no deben provocar un efecto, en cambio tenemos el metodo each que si busca este proposito.
