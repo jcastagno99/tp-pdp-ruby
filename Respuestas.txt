@@ -63,7 +63,13 @@ Expresiones regulares	/	/([a-z]+)/
 
 Por esto, y aunque a veces no lo parezca, siempre estamos creando objetos. En Ruby, todo es un objeto.
 
- 
+6: En ruby casi todo es un objeto, las clases, modulos, hasta numeros y strings. Excepto los bloques, un bloque es una porción de código encerrada entre paréntesis {} o entre do…end que puede tener multiples argumentos, es una forma de agrupar instrucciones, y solo puede aparecer después de usar un método. Ruby se recordará del bloque (variables locales, …) y después entra en el método, ejecutando el bloque cuando es preciso. Un metodo puede usar un bloque mediante la plabra YIELD (que puede ser usada varias veces en un metodo). Los bloques no son objetos, pero pueden convertirse en ellos gracias a la clase Proc (consecuencia: se nececita una clase que los convierta en objetos para un mejor manejo de los mismos?). Los objetos tipo proc son bloques que se han unido a un conjuto de variables locales. Esto se hace gracias al método lambda del módulo Kernel. 
+	 La clase Proc tiene un método para llamar al bloque: el método call.
+
+Los procs son muy útiles por que:
+
+No puedes pasar métodos dentro de otros métodos (usarlos como argumentos); pero si puedes usar procs como argumentos.
+Los métodos no pueden devolver otros métodos; pero sí pueden devolver un procs.
 
 8: Conceptos que se ven reflejados
 
