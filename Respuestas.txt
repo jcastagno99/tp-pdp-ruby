@@ -39,8 +39,8 @@ Algunas de las herramientas que Ruby nos ofrece sobre este campo son:
 // Hay más todavía.
 
 4: Las clases abiertas u open clases son clases que permiten que en todo momento se agreguen nuevos métodos a las mismas o se modifiquen otros ya existentes.
-Particularmente en ruby, si dos modulos se llaman igual su contenido se va a mezclar en un solo, que esto tambien ocurre con las clases. Esto tiene un gran poder ya que nos permite extender funcionalidaddes y sobrescribir codigo de las librerias o hasta del mismo lenguaje de Ruby.
-Esto es conocido como monkey patching y generalmente no se lo considera una buena practica.
+Particularmente en ruby, si dos modulos se llaman igual su contenido se va a mezclar en un solo, lo cual tambien ocurre con las clases. Esto tiene un gran poder ya que nos permite extender funcionalidaddes y sobrescribir codigo de las librerias o hasta del mismo lenguaje de Ruby.
+Esta funcionalidad es conocida como monkey patching y generalmente no se la considera una buena practica.
 
 5: Modulos. Agrupan metodos, constantes, clases. Son similares a las clases pero no se pueden instaciar objetos a partis de ellos. Se declaran con la palabra clase "module"
 	1) Sirven como "archivadores" (librerias) donde se introduce metodos y variables que no se quieren meter en las clases, con la finalidad de darle mas funcionalidad a las Calses que los utilizan. Generalmente se agrupan por tener algo en comun.
@@ -49,6 +49,21 @@ Esto es conocido como monkey patching y generalmente no se lo considera una buen
 
 	Mixin: 
 	El Mixins es una técnica para la reutilización de código. El objetivo es que un metodo pueda estar en diferentes clases, aunque las clases no tengan ninguna relación.
+
+6: Si, se cumple el "todo es un objeto", en ruby se entiende a objeto como un contenedor de datos que a su vez controlan el acceso a dichos datos, por ende hasta los resultados son objetos, incluso se cuentan con constructores "literales"
+es decir que para crear un objeto no siempre hace falta la palabra new, en la siguiente tabla se pueden observar los constructores literales los cuales instancian objetos de las clases dadas
+
+Clase	Constructor Literal	Ejemplo
+String	' ó "	"nuevo string" o 'nuevo string'
+Símbolo	:	:símbolo ó :"símbolo con espacios"
+Array	[ ]	[1, 2, 3, 4, 5]
+Hash	{ }	{"Nueva Yor" => "NY", "Oregon" => "OR"}
+Rango	.. ó …	0…10 ó 0..9
+Expresiones regulares	/	/([a-z]+)/
+
+Por esto, y aunque a veces no lo parezca, siempre estamos creando objetos. En Ruby, todo es un objeto.
+
+ 
 
 8: Conceptos que se ven reflejados
 
