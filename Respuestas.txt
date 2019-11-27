@@ -50,18 +50,6 @@ Esta funcionalidad es conocida como monkey patching y generalmente no se la cons
 	Mixin: 
 	El Mixins es una técnica para la reutilización de código. El objetivo es que un metodo pueda estar en diferentes clases, aunque las clases no tengan ninguna relación.
 
-6: Si, se cumple el "todo es un objeto", en ruby se entiende a objeto como un contenedor de datos que a su vez controlan el acceso a dichos datos, por ende hasta los resultados son objetos, incluso se cuentan con constructores "literales"
-es decir que para crear un objeto no siempre hace falta la palabra new, en la siguiente tabla se pueden observar los constructores literales los cuales instancian objetos de las clases dadas
-
-Clase	Constructor Literal	Ejemplo
-String	' ó "	"nuevo string" o 'nuevo string'
-Símbolo	:	:símbolo ó :"símbolo con espacios"
-Array	[ ]	[1, 2, 3, 4, 5]
-Hash	{ }	{"Nueva Yor" => "NY", "Oregon" => "OR"}
-Rango	.. ó …	0…10 ó 0..9
-Expresiones regulares	/	/([a-z]+)/
-
-Por esto, y aunque a veces no lo parezca, siempre estamos creando objetos. En Ruby, todo es un objeto.
 
 6: En ruby casi todo es un objeto, las clases, modulos, hasta numeros y strings. Excepto los bloques, un bloque es una porción de código encerrada entre paréntesis {} o entre do…end que puede tener multiples argumentos, es una forma de agrupar instrucciones, y solo puede aparecer después de usar un método. Ruby se recordará del bloque (variables locales, …) y después entra en el método, ejecutando el bloque cuando es preciso. Un metodo puede usar un bloque mediante la plabra YIELD (que puede ser usada varias veces en un metodo). Los bloques no son objetos, pero pueden convertirse en ellos gracias a la clase Proc (consecuencia: se nececita una clase que los convierta en objetos para un mejor manejo de los mismos?). Los objetos tipo proc son bloques que se han unido a un conjuto de variables locales. Esto se hace gracias al método lambda del módulo Kernel. 
 	 La clase Proc tiene un método para llamar al bloque: el método call.
