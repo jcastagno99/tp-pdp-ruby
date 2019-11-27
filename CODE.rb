@@ -124,7 +124,7 @@ class Barco
     end
 
     def cambiar_mision!(unaMision)
-        @tripulantes.removeAllSuchThat { |tripulante| !unaMision.es_util?(tripulante)}
+        @tripulantes.select! { |tripulante| unaMision.es_util?(tripulante)}
         @mision = unaMision
     end
 
@@ -163,12 +163,12 @@ class Barco
         @tripulantes.select{|tripulante| tripulante.pasado_de_grog?}
     end
 
-    def cantidadTripulantesPasadosDeGrog
+    def cantidad_tripulantes_pasadosDeGrog
 		self.tripulantes_pasados_de_grog.size
     end
 
     def cantidad_items_entre_tripulantes_pasados_de_grog
-        self.tripulantes_pasados_de_grog.flat_map ({|tripulante| tripulante.items}).size
+        self.tripulantes_pasados_de_grog.flat_map ({|tripulante| tripulante.items}).uniq.size
     end
 
     def tripulante_mas_invitador
